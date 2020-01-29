@@ -1,0 +1,9 @@
+<nb-card>
+    <nb-card-header (click)="toggle()" class="clickable">
+        <nb-icon [icon]="collapsed ? 'arrow-down' : 'arrow-up'"
+                 [ngClass]="{'blue':collapsed, 'green':!collapsed}"></nb-icon>
+    </nb-card-header>
+    <nb-card-body *ngIf="!collapsed">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur labore laudantium maiores nihil, velit ab. Incidunt repellendus aliquam officia ex tempore cupiditate possimus suscipit labore enim, ad voluptatem, debitis corrupti!</p>
+    </nb-card-body>
+</nb-card>

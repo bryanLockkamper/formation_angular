@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let item of liste;let i=index; let impair=odd; let pair=even"
+        [ngClass]="{'machin':pair}">
+        {{ i }}-{{ item }}
+    </li>
+</ul>

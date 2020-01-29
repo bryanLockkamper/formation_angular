@@ -1,0 +1,13 @@
+<div style="display: flex;">
+    <div style="width:50%">
+        <textarea></textarea>
+        <button>Envoyer</button>
+    </div>
+    <div style="width:50%">
+        <ul>
+            <li *ngFor="let m of messages">
+                {{ m.auteur }} {{m.contenu}}
+            </li>
+        </ul>
+    </div>
+</div>

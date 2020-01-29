@@ -1,0 +1,14 @@
+.clickable {
+    cursor: pointer;
+    &:hover nb-icon {
+        color: orange!important;
+    }
+}
+
+.blue {
+    color: blue;
+}
+
+.green {
+    color: green;
+}

@@ -1,0 +1,30 @@
+$success: lightgreen;
+$success-dark: darkgreen;
+
+$danger: pink;
+$danger-dark: darkred;
+
+div {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.success {
+    border-color: $success-dark;
+    h1{
+        color: $success-dark;
+    }
+    
+    background-color: $success;
+}
+
+.danger {
+    border-color: $danger-dark;
+    h1{
+        color: $danger-dark;
+    }
+    
+    background-color: $danger;
+}
+

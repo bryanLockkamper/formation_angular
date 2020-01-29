@@ -1,0 +1,32 @@
+<nb-card>
+    <nb-card-header>
+        <input
+            nbInput 
+            type="text"
+            [(ngModel)]="newArticle">
+        <button
+            nbButton
+            (click)="add()"
+            [disabled]="!newArticle">Ajouter</button>
+    </nb-card-header>
+    <nb-card-body>
+        <nb-list>
+        <nb-list-item *ngFor="let item of articles" class="inline">
+            <span>
+                {{item.quantity}} - 
+                <span (click)="check(item)"
+                    [ngClass]="{'striked' : item.isChecked}"
+                >{{item.name}}</span>
+            </span>
+            <span>
+                <button nbButton status="success" size="tiny"
+                    (click)="increase(item)">+</button>
+                <button nbButton status="warning" size="tiny"
+                    (click)="decrease(item)">-</button>
+                <button nbButton status="danger" size="tiny"
+                    (click)="remove(item)"><nb-icon icon="trash"></nb-icon></button>
+            </span>
+            </nb-list-item>
+        </nb-list>
+    </nb-card-body>
+</nb-card>

@@ -1,0 +1,9 @@
+<div style="display: flex;">
+    <div style="width: 50%">
+        <app-ex3-master (onPokemonChanged)="changePokemon($event)"></app-ex3-master>
+    </div>
+    <div style="width: 50%">
+        <app-ex3-details [selectedUrl]="url"></app-ex3-details>
+    </div>
+</div>
+

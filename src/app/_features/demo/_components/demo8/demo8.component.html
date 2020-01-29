@@ -1,0 +1,40 @@
+<nb-card>
+    <nb-card-header>
+        Register
+    </nb-card-header>
+    <nb-card-body>
+        <form [formGroup]="formGroup">
+            <div class="input-group">
+                <input nbInput type="email" formControlName="email"
+                [status]="formGroup.get('email') | inputColor"
+                >
+            </div>
+            <div class="input-group">
+                <input nbInput type="password" 
+                formControlName="password"
+                >
+            </div>
+            <div class="input-group">
+                <input nbInput type="password" formControlName="confirm"
+                    [status]="(formGroup.get('confirm').touched || formGroup.get('confirm').dirty) ? (formGroup.get('confirm').valid && !formGroup.getError('matchError') ? 'success' : 'danger') : 'primary'"
+                >
+            </div>
+            <div class="input-group">
+                <input nbInput type="text" formControlName="siteUrl">
+                {{formGroup.get('siteUrl').valid}}
+            </div>
+            <div class="input-group">
+                <input nbInput [nbDatepicker]="dp" formControlName="birthDate">
+                <nb-datepicker #dp></nb-datepicker>
+                {{formGroup.get('birthDate').valid}}
+            </div>
+            <div class="input-group">
+                <nb-toggle formControlName="cgu"></nb-toggle>
+            </div>
+            <div class="input-group">
+                <input nbButton type="submit" [disabled]="!formGroup.valid"> 
+            </div>
+        </form>
+    </nb-card-body>
+</nb-card>
+

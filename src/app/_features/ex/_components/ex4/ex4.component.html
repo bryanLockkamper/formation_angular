@@ -1,0 +1,11 @@
+<div style="display: flex;">
+    <nb-list style="width:50%">
+        <nb-list-item
+            (click)="selectCity(item)"
+            *ngFor="let item of cities"
+        >{{ item | uppercase }}</nb-list-item>
+    </nb-list>
+    <div style="width:50%">
+        <app-toto [selectedCity]="city"></app-toto>
+    </div>
+</div>

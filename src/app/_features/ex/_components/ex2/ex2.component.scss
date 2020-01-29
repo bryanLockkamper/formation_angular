@@ -1,0 +1,19 @@
+.striked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-top: 3px solid red;
+    width: 100%;
+}
+.striked{
+    position: relative;
+}
+
+.inline {
+    display: flex;
+    justify-content: space-between;
+    :nth-child(2)>button{
+        margin: 5px;
+    }
+}

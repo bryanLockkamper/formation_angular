@@ -1,0 +1,10 @@
+<p>nombre: {{ compteur }}</p>
+<button 
+    nbButton 
+    (click)="add()"
+    [disabled]="compteur >= 9">+</button>
+
+<button 
+    nbButton status="success"
+    (click)="decrease()"
+    [disabled]="compteur <= 0">-</button>

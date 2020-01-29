@@ -1,0 +1,9 @@
+<p>{{compteur | secondsFormatter}}</p>
+<button nbButton outline status="success"
+    (click)="start()"
+    [disabled]="idInterval">START</button>
+<button nbButton outline status="danger"
+    (click)="stop()"
+    [disabled]="!idInterval">STOP</button>
+<button nbButton outline status="warning"
+    (click)="reset()">RESET</button>
